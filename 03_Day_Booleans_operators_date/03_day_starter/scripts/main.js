@@ -1,5 +1,6 @@
 // this is your main.js script
 //Level 1 Exercises
+// Declare variables and assign string, boolean, undefined and null data types
 
 let firstName="Aadya"
 let lastName="Singh"
@@ -18,6 +19,15 @@ console.log(typeof year)
 console.log(typeof '10'==10)
 console.log(parseInt('9.8')==10)
 
+//Check the truthiness and falsiness of the following values: 3, "hello", -1, null, undefined, "false"
+console.log(Boolean(3))
+console.log(Boolean("hello"))
+console.log(Boolean(-1))
+console.log(Boolean(null))
+console.log(Boolean(undefined))
+console.log(Boolean("false"))
+
+//Use the Date object to do the following activities
 const ne=new Date()
 console.log(ne.getFullYear())
 console.log(ne.getMonth()+1)
