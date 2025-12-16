@@ -30,3 +30,29 @@ console.log(country.filter((a)=>a.startsWith("E")))
 console.log(products.filter((b) => typeof b.price=='number'))
 console.log(numbers.reduce((a,b)=>a+b,0))
 console.log(country.reduce((a,b)=>a+b)," ")
+console.log(names.some((a)=>a.length>7))
+console.log(country.every((a)=>a.includes('land')))
+console.log(country.find((b)=>b.length==6))
+console.log(country.findIndex((b)=>b.length==6))
+console.log(country.findIndex((b)=>b=='Norway'))
+console.log(country.findIndex((b)=>b=='Russia'))
+
+//Level 2 Exercises
+
+// 1
+
+console.log(products.filter((b)=>typeof b['price'] =='number').map((x)=>x.price).reduce((a,c)=>a+c,0))
+
+//2
+
+console.log(products.reduce((b,c)=>{
+  return b+(parseInt(c.price)||0 )
+},0))
+
+// 3
+
+let categorizeCountries=function(countries,pattern){
+  console.log(countries.filter((x)=>x.name.includes(pattern)).map((x)=>x.name))
+
+}
+categorizeCountries(countries,'ia')
